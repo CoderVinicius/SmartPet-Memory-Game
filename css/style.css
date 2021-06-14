@@ -1,0 +1,118 @@
+body {
+    margin:0;
+    height: 1100px;
+  
+    background: url("../img/background.jpg") no-repeat;
+    background-size: cover;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  form {
+    text-align: center;
+    margin-top: 25px;
+}
+    form select {        
+        height: 35px;
+        font-size: 16px;
+        border: none;
+        border-radius: 2px;
+    }
+    form input {
+        height: 35px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 2px;
+    }
+.div-main{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+  
+#btnIniciar {
+  width: 200px;
+  height: 50px;
+  background-color: rgba(243, 133, 247, 0.9);
+  font-size: 1em;
+  border-radius: 8px;
+}
+  #memory-board {
+      width:1200px;
+      height:700px;
+      padding:70px;
+      margin:0px auto;
+  }
+  
+  .card {
+    display:inline-block;
+    perspective:300px; transform-style:preserve-3d;
+  
+    position:relative;
+  }
+  
+  .card.turned {pointer-events:none;}
+  
+  .card.turned .front {transform:rotateY(0deg);}
+  .card.turned .back {transform:rotateY(180deg)}
+  
+  .card .back,
+  .card .front {
+    width:80px;
+    height:100px;
+    margin:10px;
+      padding:20px;
+    font-size:64px;
+    
+    transition:transform .6s;
+  }
+  
+  .card .back {
+    background-color: rgba(243, 133, 247, 0.9);
+  }
+  
+  .card .front {
+    position:absolute;
+    left:0;top:0;
+    transform:rotateY(-180deg) translateZ(1px); backface-visibility:hidden;
+  }
+  
+  .clock {
+    background-color: rgba(243, 133, 247, 0.9);
+    border-radius: 8px;
+    font-size: 30px;
+    width:200px;
+    align-items: center;
+  
+  }
+
+  .numbers {
+    text-align: center;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  h1 {
+    color: rgba(243, 133, 247, 0.9);
+    font-weight: bolder;
+    font-size: 67px;
+    text-align: center;
+    text-shadow: 0px 0px 20px rgba(150, 150, 150, 1);
+  
+  }
+  
+  h2 {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 1px rgba(243, 133, 247, 0.9);
+    text-shadow: 1px rgba(243, 133, 247, 0.9);
+  }
+  
+  p {
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+  }
+  
