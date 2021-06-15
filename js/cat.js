@@ -34,7 +34,7 @@ const cards = [
     memoryGame.cards.forEach(pic => {
       html += `<div class="card" data-card-name="${pic.name}">`;
       html += `<div class="back" name="${pic.img}"></div>`;
-      html += `<div class="front" style="background: url(/img/cat/${pic.img}) no-repeat"></div>`;
+      html += `<div class="front" style="background: url(../img/cat/${pic.img}) no-repeat"></div>`;
       html += `</div>`;
     });
     
