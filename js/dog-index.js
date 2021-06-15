@@ -29,20 +29,18 @@ const cards = [
   const memoryGame = new MemoryGame(cards);
   console.log("new game created: ", memoryGame);
   
-  
-
   document.addEventListener("DOMContentLoaded", function(event) {
     let html = "";
     memoryGame.cards.forEach(pic => {
       html += `<div class="card" data-card-name="${pic.name}">`;
       html += `<div class="back" name="${pic.img}"></div>`;
-      html += `<div class="front" style="background: url(img/${pic.img}) no-repeat"></div>`;
+      html += `<div class="front" style="background: url(/img/${pic.img}) no-repeat"></div>`;
       html += `</div>`;
     });
-  
-  
-    document.querySelector("#memory-board").innerHTML = html;
-  
+    
+   
+    let container = document.querySelector("#memory-board").innerHTML = html;
+
     function toggle(element, classes) {
       classes.forEach(className => element.classList.toggle(className));
     }
@@ -77,8 +75,6 @@ const cards = [
             }, 1000);
             memoryGame.pickedCards = [];
           }
-          clicked.innerHTML = memoryGame.pairsClicked;
-          guessed.innerHTML = memoryGame.pairsGuessed;
         }
       };
     });
@@ -97,15 +93,14 @@ const cards = [
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+          let newHtml = '<div class="div-fail"><h1>Você Perdeu!!!!</h1> <a class="btnReiniciar" href="/index.html">Menu Inicial</a> </div>';
+          document.querySelector('#memory-board').innerHTML = newHtml;
         }
     }, 1000);
 }
-
-btnIniciar.addEventListener("click", () =>  {
-    let fiveMinutes = 60 * 2,
-        display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
-});
  
-  
+window.addEventListener("load", () =>  {
+    let twoMinutes = 90;
+    display = document.querySelector('#time');
+    startTimer(twoMinutes, display);
+});

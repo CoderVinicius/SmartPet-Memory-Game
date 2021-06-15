@@ -6,6 +6,7 @@ class MemoryGame {
       this.pairsClicked = 0;
       this.shuffleCards();
     }
+
     shuffleCards() {
       let len = this.cards.length;
       while (len > 0) {
@@ -17,7 +18,6 @@ class MemoryGame {
       }
     }
     checkIfPair(card1, card2) {
-      this.pairsClicked++;
       if (card1 === card2) {
         this.pairsGuessed++;
         this.isFinished();
@@ -25,15 +25,15 @@ class MemoryGame {
       }
       return false;
     }
+
     isFinished() {
-      if (this.pairsGuessed === 2) {
-        document.querySelector("#memory-board").innerHTML = "";
-        let h1 = document.createElement("h1");
-        h1.style.color = "pink";
-        h1.innerHTML = "Ganhou!!!";
-        document.querySelector("#memory-board").appendChild(h1);
-      }
-    }
+      if (this.pairsGuessed === 12) {
+        let newHtml = '<div class="div-fail"><h1>Você Ganhou!!!!</h1> <a class="btnReiniciar" href="/index.html">Menu Inicial</a> </div>';
+          document.querySelector('#memory-board').innerHTML = newHtml;
+      } 
+      } 
   }
+
+  
   
   
