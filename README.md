@@ -10,6 +10,9 @@ Click on both cards you'd like to turn, if wrong, cards will turn back. If corre
  1. HTML
  2. CSS
  3. JAVASCRIPT
+ 
+## Run in local
+To access the files, log into the Branch master.
 
 ## Presentation link
  [Acess in](https://docs.google.com/presentation/d/1AHz5OA3aFeQ-Jj03qptOx5KedBMD9nyHjpKBRopwSXg/edit#slide=id.ge0b27e97e2_0_111)
