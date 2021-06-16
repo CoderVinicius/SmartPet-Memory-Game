@@ -65,7 +65,7 @@ body {
     width:80px;
     height:120px;
     margin:10px;
-      padding:20px;
+    padding:20px;
     font-size:64px;
     
     transition:transform .6s;
@@ -75,6 +75,8 @@ body {
   .card .back {
     background-color: rgba(243, 133, 247, 0.9);
     background: url(../img/background.jpg) no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
   }
   
   .card .front {
@@ -178,8 +180,21 @@ body {
       height: 800px;
     }
     .clock{
+      width: 400px;
+      height: 200px;
       margin-top: 200px;
       display: flex;
       align-items: center;
+      flex-direction: column;
+    }
+    .card .back,
+  .card .front {
+    width:80px;
+    height:120px;
+    margin:10px;
+    padding:40px;
+    font-size:64px;
+    
+    
     }
   }
