@@ -79,28 +79,4 @@ const cards = [
       };
     });
   });
-  const btnIniciar = document.getElementById("btnIniciar");
-
-  function startTimer(duration, display) {
-    let timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        if (--timer < 0) {
-          let newHtml = '<div class="div-fail"><h1>Você Perdeu!!!!</h1> <a class="btnReiniciar" href="/index.html">Menu Inicial</a> </div>';
-          document.querySelector('#memory-board').innerHTML = newHtml;
-        }
-    }, 1000);
-}
- 
-window.addEventListener("load", () =>  {
-    let twoMinutes = 90;
-    display = document.querySelector('#time');
-    startTimer(twoMinutes, display);
-});
+  
