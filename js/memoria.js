@@ -60,7 +60,7 @@ function stopTimer(){
 }
 
   window.onload = function (){
-    let twoMinutes = 6;
+    let twoMinutes = 120;
     display = document.querySelector('#time');
     startTimer(twoMinutes, display);
 }
